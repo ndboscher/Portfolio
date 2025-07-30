@@ -9,7 +9,7 @@ export default function CryptoAppPage() {
   const cryptoImages = GALLERY["Crypto app"];
 
   return (
-    <div className="flex">
+    <div>
       <TreeNavigation />
 
       <div className="container mx-auto px-4 py-8">
@@ -21,7 +21,7 @@ export default function CryptoAppPage() {
           </p>
         </header>
 
-        <Separator className="my-8" />
+        <Separator className="my-8 bg-[var(--primary)]" />
 
         <section className="mb-12">
           <h2 className="text-3xl font-semibold text-center mb-6">Image Gallery</h2>

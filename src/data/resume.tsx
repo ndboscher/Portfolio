@@ -203,7 +203,7 @@ export const DATA = {
 
       {
       title: "Comcast Redesign",
-      href: "https://chatcollect.com",
+      href: "/Comcast",
       dates: "",
       active: true,
       description:
@@ -302,7 +302,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "/NB TEXTILES OG",
+          href: "/Textiles",
           icon: <Icons.globe className="size-3" />,
         },
       ],

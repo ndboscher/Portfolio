@@ -20,18 +20,17 @@ export function TreeNavigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="w-64 p-4 border-r bg-background shrink-0">
-      <h3 className="text-lg font-semibold mb-4">Artwork Galleries</h3>
-      <ul className="space-y-2">
+        <nav className="w-full py-4 border-b border-[var(--primary)] bg-background">
+      <ul className="flex justify-center items-center space-x-2 md:space-x-4 overflow-x-auto">
         {galleryOrder.map((gallery) => (
           <li key={gallery.path}>
             <Link
               href={gallery.path}
               className={cn(
-                "block py-2 px-3 rounded-md text-sm font-medium",
+                "py-2 px-3 text-sm font-medium whitespace-nowrap",
                 pathname === gallery.path
-                  ? "bg-muted text-foreground"
-                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                  ? "text-foreground border-b-2 border-primary"
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
               {gallery.name}

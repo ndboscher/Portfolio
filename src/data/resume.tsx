@@ -8,9 +8,9 @@ export const DATA = {
   location: "Philadelphia, PA",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "A computer enthusiast with a designer to learn and grow. I am a full stack developer with a passion for building and designing for the web. ",
+    "A computer enthusiast with a desire to learn and grow. I am a full stack developer with a passion for building and designing for the web. ",
   summary:
-    "My objective is to create exceptionally engaging digital experiences that consistently engage users. I am fully prepared and eager to contribute to a prestigious design firm, applying my creative skills in the design and development of first-class web applications.",
+    "My objective is to create exceptionally engaging digital experiences that captivate and consistently engage users. I am eager to contribute to a prestigious design firm, applying my creative skills to design and develop first-class web applications.",
   avatarUrl: "/me.png",
   skills: [
     "React",
@@ -85,7 +85,7 @@ export const DATA = {
       start: "",
       end: "",
       description:
-        "Designed and developed websites for local small businesses such as attorneys, architects and insurance companies. Created the layout, visual design, and user interface for websites, ensuring a cohesive and visually appealing look and feel. Developed graphics, images, and other visual elements, including logos, banners, icons, and other graphic assets. • Created intuitive navigation, user-friendly interfaces, and an overall positive user experience on the websites. • Create wireframes and interactive prototypes to illustrate the website's layoutand functionality before development.",
+        "Designed and developed websites for local small businesses, including attorneys, architects, and insurance companies. Created layouts, visual designs, and user interfaces for websites, ensuring a cohesive and visually appealing look and feel. Developed graphics, images, and other visual elements, including logos, banners, and icons. Created intuitive navigation and user-friendly interfaces to ensure a positive user experience. Created wireframes and interactive prototypes to illustrate website layout and functionality before development.",
     },
   
   ],
@@ -116,7 +116,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+        "Developed an AI-powered customer support chatbot that automatically responds to support tickets using the latest GPT models.",
       technologies: [
         "adobe photoshop" ,
         "adobe illustrator" ,
@@ -138,7 +138,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "Developed an open-source logging and analytics platform for OpenAI that allows you to log your ChatGPT API requests, analyze costs, and improve your prompts.",
       technologies: [
         "adobe photoshop",
         "adobe illustrator",
@@ -160,7 +160,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "a DC/Marvel Crossover",
+        "A DC/Marvel crossover.",
       technologies: [
         "adobe illustrator",
         "adobe photoshop",
@@ -207,7 +207,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A redesign exercise of Comcast's Xfinity brand. The goal, to create a new look and feel that was modern and user friendly. while leaning in to their history, i found with consumers to further represent their reputation for connecting communities or to impose an .",
+        "A redesign of Comcast's Xfinity brand. The goal was to create a modern and user-friendly look and feel that honors their history and reputation for connecting communities.",
       technologies: [
         "adobe illustrator",
         "adobe photoshop",
@@ -317,7 +317,7 @@ export const DATA = {
       dates: "winter-spring",
       location: "North East",
       description:
-        "If i could i would live in the mountains and snowboard all day. ",
+        "If I could, I would live in the mountains and snowboard all day. ",
       image:
         "/SnowBoard.png",
       links: [],
@@ -328,7 +328,7 @@ export const DATA = {
       dates: "spring-fall",
       location: "North East",
       description:
-        "Currently working on my 46er list, and have climbed 12 of the 46 peaks in the Adirondacks.",
+        "I am currently working on my 46er list and have climbed 12 of the 46 peaks in the Adirondacks.",
       image:
         "/Mtn.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
@@ -340,7 +340,7 @@ export const DATA = {
       dates: "Year Round",
       location: "",
       description:
-        "i have been climbing indoors and outside for the past year and have been loving it.",
+        "I have been climbing indoors and outdoors for the past year and have been loving it.",
       image:
         "Climb.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
@@ -349,8 +349,8 @@ export const DATA = {
 
     {
       title: "Disc golf",
-      dates: "year round, im nuts",
-      location: "Philly suburb area and if i can find a course while traveling",
+      dates: "Year-round, I'm nuts",
+      location: "the Philly suburban area, and if I can find a course while traveling",
       description:
         "",
       image:

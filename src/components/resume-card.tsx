@@ -47,17 +47,15 @@ export const ResumeCard = ({
     >
       <Card className="flex">
         <div className="flex-none">
-          <div className="shadow-sm hover:shadow-lg size-12 m-auto bg-muted-background dark:bg-foreground rounded-full">
-            {logoUrl && (
-              <Image
-                src={logoUrl}
-                alt={altText}
-                width={48}
-                height={48}
-                className="object-contain rounded-full"
-              />
-            )}
-          </div>
+          {logoUrl && (
+            <Image
+              src={logoUrl}
+              alt={altText}
+              width={48}
+              height={48}
+              className="shadow-sm hover:shadow-lg size-12 m-auto bg-muted-background dark:bg-foreground object-contain rounded-full"
+            />
+          )}
         </div>
         <div className="grow ml-4 items-center flex-col group">
           <CardHeader>

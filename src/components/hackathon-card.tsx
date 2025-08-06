@@ -26,13 +26,15 @@ export function HackathonCard({
 }: Props) {
   return (
     <li className="relative ml-10 py-4">
-      <Image
-        src={image}
-        alt={title}
-        width={48}
-        height={48}
-        className="absolute -left-16 top-2 object-contain rounded-full"
-      />
+      {image && (
+        <Image
+          src={image}
+          alt={title}
+          width={48}
+          height={48}
+          className="absolute -left-16 top-2 object-contain rounded-full"
+        />
+      )}
       <div className="flex flex-1 flex-col justify-start gap-1">
         {dates && (
           <time className="text-xs text-muted-foreground">{dates}</time>

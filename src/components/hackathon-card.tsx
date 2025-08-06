@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
@@ -26,10 +27,15 @@ export function HackathonCard({
   return (
     <li className="relative ml-10 py-4">
       <div className="absolute -left-16 top-2 flex items-center justify-center bg-Primary rounded-full">
-        <Avatar className="border size-12 m-auto">
-          <AvatarImage src={image} alt={title} className="object-contain" />
-          <AvatarFallback>{title[0]}</AvatarFallback>
-        </Avatar>
+        {image && (
+          <Image
+            src={image}
+            alt={title}
+            width={48}
+            height={48}
+            className="object-contain rounded-full"
+          />
+        )}
       </div>
       <div className="flex flex-1 flex-col justify-start gap-1">
         {dates && (

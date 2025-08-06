@@ -64,10 +64,9 @@ export function ProjectCard({
           <Image
             src={image}
             alt={title}
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto overflow-hidden object-cover object-top object-center"
+            width={500}
+            height={500}
+            className="w-full h-auto overflow-hidden object-cover object-top"
           />
         )}
       </Link>

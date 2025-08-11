@@ -196,7 +196,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/Artwork/EL_Burrito/Burrito  Reel-4.png",
+      image: "/Artwork/EL_Burrito/ElBurritoBand5.png",
       video:
         "",
     },
@@ -220,7 +220,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/Artwork/Comcast/3D Glass Logo Evil Comcast.png",
+      image: "/Artwork/Comcast/Comcast_22.png",
       video:
         "",
     },

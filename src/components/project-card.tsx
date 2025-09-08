@@ -66,6 +66,7 @@ export function ProjectCard({
             alt={title}
             width={500}
             height={500}
+            loading="lazy"
             className="w-full h-auto overflow-hidden object-cover object-top"
           />
         )}

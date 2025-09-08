@@ -32,6 +32,7 @@ export function HackathonCard({
           alt={title}
           width={48}
           height={48}
+          loading="lazy"
           className="absolute -left-16 top-2 object-contain rounded-full"
         />
       )}

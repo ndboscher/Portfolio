@@ -19,6 +19,7 @@ export const DATA = {
     "css",
     "Node.js",
     "Python",
+    "Gemini Ai",
     "figma",
     "penpot",
     "adobe xd",
@@ -87,18 +88,18 @@ export const DATA = {
       description:
         "Designed and developed websites for local small businesses, including attorneys, architects, and insurance companies. Created layouts, visual designs, and user interfaces for websites, ensuring a cohesive and visually appealing look and feel. Developed graphics, images, and other visual elements, including logos, banners, and icons. Created intuitive navigation and user-friendly interfaces to ensure a positive user experience. Created wireframes and interactive prototypes to illustrate website layout and functionality before development.",
     },
-  
+
   ],
   education: [
   
-    {
+    /*{
       school: "Jefferson University",
       href: "https://jefferson.edu",
       degree: "Visual Communications B.S. Graphic Design Communication",
       logoUrl: "/Jef.jpg",
       start: "",
       end: "",
-    },
+    },*/
     {
       school: "Montgomery Community College",
       href: "https://mc3.edu",
@@ -146,7 +147,7 @@ export const DATA = {
       links: [
         {
           type: "Gallery",
-          href: "https://llm.report",
+          href: "",
           icon: <Icons.globe className="size-3" />,
         },
        
@@ -216,7 +217,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com", 
+          href: "/Comcast", 
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -331,7 +332,7 @@ export const DATA = {
         "I am currently working on my 46er list and have climbed 12 of the 46 peaks in the Adirondacks.",
       image:
         "/Mtn.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+      mlh: "",
       links: [],
     },
 
@@ -342,8 +343,8 @@ export const DATA = {
       description:
         "I have been climbing indoors and outdoors for the past year and have been loving it.",
       image:
-        "Climb.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+        "/Climb.png",
+      mlh: "",
       links: [],
     },
 
@@ -355,7 +356,7 @@ export const DATA = {
         "",
       image:
         "/DiscGolf.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+      mlh: "",
       links: [],
     },
     

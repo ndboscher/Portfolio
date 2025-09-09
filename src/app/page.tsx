@@ -1,4 +1,8 @@
+"use client";
+
+import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
@@ -16,6 +20,7 @@ const ResumeCard = dynamic(() => import("@/components/resume-card").then((mod) =
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const [isHoldingClick, setIsHoldingClick] = React.useState(false);
   return (
         <main className="flex flex-col min-h-dvh space-y-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <ThemeSection sectionId="hero" defaultTheme="light">
@@ -35,8 +40,17 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+              <Avatar
+                className="size-28 border"
+                onMouseDown={() => setIsHoldingClick(true)}
+                onMouseUp={() => setIsHoldingClick(false)}
+                onMouseLeave={() => setIsHoldingClick(false)}
+              >
+                {isHoldingClick ? (
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                ) : (
+                  <PixelatedCanvas src={DATA.avatarUrl} width={112} height={112} className="rounded-full" />
+                )}
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>

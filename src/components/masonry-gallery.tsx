@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 type GalleryProps = {
   images: {
@@ -59,28 +59,39 @@ export function MasonryGallery({ images, className }: GalleryProps) {
         ))}
       </div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="sm:max-w-[800px] p-0">
+        <DialogContent className="sm:max-w-[800px] p-4 bg-background">
           {selectedImageIndex !== null && (
-            <div className="relative">
-              <Image
-                src={images[selectedImageIndex].image}
-                alt="Enlarged Image"
-                width={1200}
-                height={1200}
-                className="w-full h-auto max-h-[90vh]"
-              />
-              <button
-                onClick={handlePrevious}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                onClick={handleNext}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-              >
-                <ChevronRight size={24} />
-              </button>
+            <div className="flex items-center justify-between w-full h-full">
+              {/* Left Arrow Container */}
+              <div className="flex items-center justify-center w-12 h-full">
+                <button
+                  onClick={handlePrevious}
+                  className="text-accent p-2 rounded-full"
+                >
+                  <ArrowLeft size={24} />
+                </button>
+              </div>
+
+              {/* Image Container */}
+              <div className="flex-grow flex items-center justify-center">
+                <Image
+                  src={images[selectedImageIndex].image}
+                  alt="Enlarged Image"
+                  width={1200}
+                  height={1200}
+                  className="w-full h-auto max-h-[90vh] object-contain"
+                />
+              </div>
+
+              {/* Right Arrow Container */}
+              <div className="flex items-center justify-center w-12 h-full">
+                <button
+                  onClick={handleNext}
+                  className="text-accent p-2 rounded-full"
+                >
+                  <ArrowRight size={24} />
+                </button>
+              </div>
             </div>
           )}
         </DialogContent>

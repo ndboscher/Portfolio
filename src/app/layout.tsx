@@ -61,7 +61,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" themes={['frappe-blue', 'latte-rosewater']} defaultTheme="frappe-blue">
           <TooltipProvider delayDuration={0}>
             <main>
               {children}

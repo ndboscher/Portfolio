@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type GalleryProps = {
   images: {
@@ -15,12 +16,26 @@ type GalleryProps = {
 };
 
 export function MasonryGallery({ images, className }: GalleryProps) {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleImageClick = (image: string) => {
-    setSelectedImage(image);
+  const handleImageClick = (index: number) => {
+    setSelectedImageIndex(index);
     setIsOpen(true);
+  };
+
+  const handleNext = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex + 1) % images.length);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex(
+        (selectedImageIndex - 1 + images.length) % images.length
+      );
+    }
   };
 
   return (
@@ -32,7 +47,7 @@ export function MasonryGallery({ images, className }: GalleryProps) {
         )}
       >
         {images.map((item, idx) => (
-          <div key={idx} className="break-inside-avoid cursor-pointer" onClick={() => handleImageClick(item.image)}>
+          <div key={idx} className="break-inside-avoid cursor-pointer" onClick={() => handleImageClick(idx)}>
             <Image
               src={item.image}
               alt={item.description || item.title}
@@ -45,14 +60,28 @@ export function MasonryGallery({ images, className }: GalleryProps) {
       </div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="sm:max-w-[800px] p-0">
-          {selectedImage && (
-            <Image
-              src={selectedImage}
-              alt="Enlarged Image"
-              width={1200}
-              height={1200}
-              className="w-full h-auto max-h-[90vh]"
-            />
+          {selectedImageIndex !== null && (
+            <div className="relative">
+              <Image
+                src={images[selectedImageIndex].image}
+                alt="Enlarged Image"
+                width={1200}
+                height={1200}
+                className="w-full h-auto max-h-[90vh]"
+              />
+              <button
+                onClick={handlePrevious}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                onClick={handleNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
           )}
         </DialogContent>
       </Dialog>

@@ -47,27 +47,14 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/Linkedin-nb",
+        url: "www.linkedin.com/in/nathan-boscher-199a95248",
         icon: Icons.linkedin,
 
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
-        navbar: true,
-      },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:nboscher@proton.me",
         icon: Icons.email,
 
         navbar: false,
@@ -78,7 +65,7 @@ export const DATA = {
   work: [
     {
       company: "Freelance Interactive ",
-      href: "https://atomic.finance",
+      href: "",
       badges: [],
       location: "Remote",
       title: "Web Designer, illustrator, Developer",
